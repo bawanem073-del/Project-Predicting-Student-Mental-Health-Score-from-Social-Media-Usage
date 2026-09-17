@@ -30,22 +30,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5500",
-        "http://127.0.0.1:5500"
-    ],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=["http://localhost:5500"],  # your frontend's origin
-#     allow_methods=["POST"],
-#     allow_headers=["*"],
-# )
 
 
 
@@ -71,6 +62,9 @@ class StudentData(BaseModel):
 
 class PredictionResponse(BaseModel):
     predicted_mental_health_score: float
+
+
+
 
 
 
