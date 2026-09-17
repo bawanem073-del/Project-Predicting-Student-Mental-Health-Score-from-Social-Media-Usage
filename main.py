@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 
-model = joblib.load('Mental_Health_Model.pkl')
+model = joblib.load('artifacts/Mental_Health_Model.pkl')
 
 top_contries = ['Other',
                 'India',
@@ -64,7 +64,9 @@ class PredictionResponse(BaseModel):
     predicted_mental_health_score: float
 
 
-
+@app.get('/')
+def root():
+    return {"message": "Welcome to the Mental Health Prediction API!"}
 
 
 
