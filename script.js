@@ -5,7 +5,7 @@
 ===================================================== */
 
 const CONFIG = {
-    API_BASE_URL: "http://localhost:8000",
+    API_BASE_URL: "https://project-predicting-student-mental-health-6k56.onrender.com",
     PREDICT_ENDPOINT: "/predict"
 };
 
